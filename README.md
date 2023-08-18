@@ -1,28 +1,31 @@
 # WP Setup
 
-This repo contains a simple bash script designed to help speed up local
-WordPress development by leveraging the [WP-CLI](https://wp-cli.org) to perform
-common setup instructions such as database creation, WordPress download,
-installation & configuration, ready for development.
+*Este repositorio es un clon de [WP Setup](https://github.com/harryfinn/wp-setup) de [@harryfinn](https://github.com/harryfinn).*
 
-## How to use
+## Descripción
 
-Download the `script.sh` file, grant executable permissions and move to suitable
-path:
+Este repositorio contiene un pequeño script de `bash` diseñado para ayudar a acelerar el desarrollo local de WordPress aprovechando [WP-CLI](https://wp-cli.org) para realizar instrucciones de configuración comunes, como la creación de bases de datos, descarga, instalación y configuración de WordPress. , listo para el desarrollo.
 
-```txt
-curl -O https://raw.githubusercontent.com/harryfinn/wp-setup/master/script.sh
+## Modo de uso
+Descargue el archivo `script.sh`, otorgue permisos ejecutables y muévalo a la ruta adecuada:
+
+```bash
+curl -O https://raw.githubusercontent.com/rogertm/wp-setup/main/script.sh
 chmod +x script.sh
 sudo mv script.sh /usr/local/bin/wp-setup
 ```
 
-You can now run this tool by running the following command `wp-setup` within
-a folder you wish to generate a WordPress instance within, ready for theme
-development.
+Ahora puede usar esta herramienta ejecutando el siguiente comando `wp-setup` dentro del directorio en el que desea generar una instalación de WordPress, lista para el desarrollo.
+
+## Cambios fundamentales con respecto al repositorio original
+
+* Opciones de configuración adicionales como:
+  * *Admin user name*
+  * *Admin password*
+  * *Database table prefix*
+  * *Debug mode*
+* Si el modo debug es activado se instalarán los plugins [Query Monitor](https://wordpress.org/plugins/query-monitor/) y [Debug Bar](https://wordpress.org/plugins/debug-bar/).
 
 ## TODO
 
-- [ ] Add error handling for WP-CLI commands
-- [ ] Add option to use WP Skeleton repo as theme default Setup
-- [ ] Investigate option(s) of use in deployments (might be best kept as a
-  separate repo/tool)
+* [ ] Agregar manejo de errores para comandos WP-CLI
