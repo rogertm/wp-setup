@@ -7,12 +7,12 @@
 Este repositorio contiene un pequeño script de `bash` diseñado para ayudar a acelerar el desarrollo local de WordPress aprovechando [WP-CLI](https://wp-cli.org) para realizar instrucciones de configuración comunes, como la creación de bases de datos, descarga, instalación y configuración de WordPress. , listo para el desarrollo.
 
 ## Modo de uso
-Descargue el archivo `script.sh`, otorgue permisos ejecutables y muévalo a la ruta adecuada:
+Descargue el archivo `wp-setup.sh`, otorgue permisos ejecutables y muévalo a la ruta adecuada:
 
 ```bash
-curl -O https://raw.githubusercontent.com/rogertm/wp-setup/main/script.sh
-chmod +x script.sh
-sudo mv script.sh /usr/local/bin/wp-setup
+curl -O https://raw.githubusercontent.com/rogertm/wp-setup/main/wp-setup.sh
+chmod +x wp-setup.sh
+sudo mv wp-setup.sh /usr/local/bin/wp-setup
 ```
 
 Ahora puede usar esta herramienta ejecutando el siguiente comando `wp-setup` dentro del directorio en el que desea generar una instalación de WordPress, lista para el desarrollo.
@@ -20,12 +20,19 @@ Ahora puede usar esta herramienta ejecutando el siguiente comando `wp-setup` den
 ## Cambios fundamentales con respecto al repositorio original
 
 * Opciones de configuración adicionales como:
-  * *Admin user name*
-  * *Admin password*
-  * *Database table prefix*
-  * *Debug mode*
-* Si el modo debug es activado se instalarán los plugins [Query Monitor](https://wordpress.org/plugins/query-monitor/) y [Debug Bar](https://wordpress.org/plugins/debug-bar/).
+  * *Nombre de usuario*
+  * *Contraseña de usuario*
+  * *Prefijo de tablas de la base de datos*
+  * *Modo Debug*
+  * *Instalación de los plugins [Query Monitor](https://wordpress.org/plugins/query-monitor/) y [Debug Bar](https://wordpress.org/plugins/debug-bar/) en modo Debug*
+  * *Interactividad mejorada para la eliminación de contenido predeterminado*
+* Mejoras generales
+  * *Uso de colores robusto y portable*
+  * *Verificación eficiente del WP-CLI*
+  * *Validación rigurosa de la entrada de datos*
+  * *Manejo detallado de errores y mensajes claros*
+  * *Gestión segura de la base de datos*
+  * *Actualización de plugins y temas tras la instalación*
+  * *Seguridad en la presentación de la información final*
 
-## TODO
-
-* [ ] Agregar manejo de errores para comandos WP-CLI
+Este plugin ha sido mejorado con la ayuda de *ChatGPT*.
